@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>no.skatteetaten.fastsetting.formueinntekt.felles.typescriptdtotranslator</groupId>
+        <groupId>codes.rafael.typescriptdtotranslator</groupId>
         <artifactId>typescript-dto-translator</artifactId>
-        <version>0-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>typescript-dto-translator-maven-plugin</artifactId>
@@ -14,7 +14,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>no.skatteetaten.fastsetting.formueinntekt.felles.typescriptdtotranslator</groupId>
+            <groupId>codes.rafael.typescriptdtotranslator</groupId>
             <artifactId>typescript-dto-translator-generator</artifactId>
             <version>${project.version}</version>
         </dependency>

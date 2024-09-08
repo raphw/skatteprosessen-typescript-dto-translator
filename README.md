@@ -58,7 +58,7 @@ Typescript types can be created within a project's build using the *typescript-d
 <build>
   <plugins>
     <plugin>
-      <groupId>no.skatteetaten.fastsetting.formueinntekt.felles.typescriptdtotranslator</groupId>
+      <groupId>codes.rafael.typescriptdtotranslator</groupId>
       <artifactId>typescript-dto-translator-maven-plugin</artifactId>
       <version>LATEST</version>
       <executions>

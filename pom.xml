@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>no.skatteetaten.fastsetting.formueinntekt.felles.typescriptdtotranslator</groupId>
+  <groupId>codes.rafael.typescriptdtotranslator</groupId>
   <artifactId>typescript-dto-translator</artifactId>
-  <version>0-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <name>Typescript from Java DTO creator</name>
+  <description>This library translates Java DTOs to Typescript interfaces.</description>
+  <url>https://github.com/raphw/skatteprosessen-typescript-dto-translator</url>
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+  </distributionManagement>
+  <scm>
+    <connection>scm:git:git://github.com/raphw/skatteprosessen-typescript-dto-translator.git</connection>
+    <developerConnection>scm:git:git@github.com:raphw/skatteprosessen-typescript-dto-translator.git</developerConnection>
+    <url>http://github.com/raphw/skatteprosessen-typescript-dto-translator/tree/master</url>
+    <tag>HEAD</tag>
+  </scm>
+  <developers>
+    <developer>
+      <name>Rafael Winterhalter</name>
+      <email>rafael.wth@gmail.com</email>
+      <organization>Skatteetaten</organization>
+      <organizationUrl>https://rafael.codes</organizationUrl>
+    </developer>
+  </developers>
   <modules>
     <module>typescript-dto-translator-generator</module>
     <module>typescript-dto-translator-maven-plugin</module>
@@ -13,7 +37,7 @@
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <sonar.jacoco.reportPath>${project.build.directory}/jacoco.exec</sonar.jacoco.reportPath>
   </properties>
-  <inceptionYear>2020</inceptionYear>
+  <inceptionYear>2024</inceptionYear>
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -49,6 +73,20 @@
             <id>agent</id>
             <goals>
               <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
             </goals>
           </execution>
         </executions>
